@@ -14,3 +14,12 @@ Comming soon
 
 ## Citation
 If you find our work useful for your research, please consider cite our paper. :smile:
+```
+@article{huang2022egocentric,
+author = {Huang, Chao and Tian, Yapeng and Kumar, Anurag and Xu, Chenliang},
+title = {Egocentric Audio-Visual Object Localization},
+journal={arXiv preprint},
+year = {2023},
+month = {March}
+}
+```
