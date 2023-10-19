@@ -113,8 +113,8 @@ class NetWrapper(torch.nn.Module):
         Neg = (Neg_mask * A0).view(*A0.shape[:2],-1).sum(-1) / (Neg_mask.view(*Neg_mask.shape[:2],-1).sum(-1)) * optim_mask
 
         # loss calculation
-        logits = torch.cat((Pos, Neg), dim=1) / 0.1
-        logits_bag = torch.cat((Pos_bag, Neg), dim = 1) / 0.1
+        logits = torch.cat((Pos, Neg), dim=1) / 0.2
+        logits_bag = torch.cat((Pos_bag, Neg), dim = 1) / 0.2
 
         labels = torch.zeros(logits.shape[0], dtype=torch.long).cuda()
         loss = self.cts(logits_bag, labels)
