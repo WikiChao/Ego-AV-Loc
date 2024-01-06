@@ -26,6 +26,7 @@ Note, some videos are further filtered out and some bounding boxes are updated r
     b. Extract waveforms at 11000Hz for all the videos.
 
 3. Data splits. Please follow the same train/test splits at https://github.com/epic-kitchens/epic-kitchens-100-annotations.
+4. Filter out silent clips. As the action recognition splits are developed based on action, not audio, there could be video clips that are silent or do not include meaningful sounds. We try to filter out some silent video clips to obtain a better training set, please refer to ```./code/script/filter_silent_clips.py```. (Optional, you can use the newly released <a href="https://epic-kitchens.github.io/epic-sounds/">EPIC-SOUND dataset</a> to obtain an audio-based training split) 
 
 ### Annotation Format
 The annotations can be found at ```./data/soundingobject.json```.
